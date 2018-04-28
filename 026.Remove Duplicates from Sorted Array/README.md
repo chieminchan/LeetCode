@@ -16,7 +16,6 @@
 		    }
 		    return nums;
 		};
-
 		var numsArr = [0,1,0,1,1,1,2,2,3,3,4];
 		removeDuplicates(numsArr);
 		console.log(numsArr,temp); // [0, 1, 1, 1, 2, 3, 4]		
