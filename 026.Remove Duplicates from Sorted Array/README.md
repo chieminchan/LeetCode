@@ -7,7 +7,7 @@
 
 但忽略了splice改变原数组，使在遍历时产生位置错乱，不是和想象中的一样固定位置一样
 
-` `` JavaScript
+```JavaScript
 例子:
 		var removeDuplicates = function(nums) {
 		    for(var i = 0 ;i<nums.length;i++){
