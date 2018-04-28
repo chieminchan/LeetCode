@@ -6,7 +6,8 @@
 遍历数组，对每一项进行nums.indexOf()配对，如果数组中有重复值，indexOf会返回第一个配对的值的位置，而和多个重复的值的位置不一样，进而采用splice(i,1)对数组重复值进行删除修改。
 
 但忽略了splice改变原数组，使在遍历时产生位置错乱，不是和想象中的一样固定位置一样
-` `` 
+
+` `` JavaScript
 例子:
 		var removeDuplicates = function(nums) {
 		    for(var i = 0 ;i<nums.length;i++){
