@@ -7,19 +7,16 @@
   对数组重复值进行删除修改。（耗时：314ms）
 
 ```JavaScript
-		var removeDuplicates = function(nums) {
-			// var len =nums.length;
-		    for(var i = 0 ;i<nums.length;i++){
-		        if(nums.indexOf(nums[i]) !=i){
-		            nums.splice(i,1);
-		            i--;
-		        }
-		    }
-		    return nums;
-		};
-		var numsArr = [0,1,0,1,1,2,2,3,3,4,5];
-		removeDuplicates(numsArr);
-		console.log(numsArr);	
+
+for(var i = 0 ;i<nums.length;i++){
+	if(nums.indexOf(nums[i]) !=i){
+		nums.splice(i,1);
+		i--;
+	}
+}
+return nums;
+
+
 ```
 * 参考解决方案1:（耗时：164ms）
 ```JavaScript
@@ -34,10 +31,7 @@
 
 * 参考解决方案2:（耗时：96ms）
 ```JavaScript
-var removeDuplicates = function(nums) {
-    var cur = 0,
-        nex = 0;
-    
+    var cur = 0, nex = 0;
     while(next < nums.length){
         if(nums[next] > nums[cur]){
             firstP++;
@@ -45,8 +39,6 @@ var removeDuplicates = function(nums) {
         }
         secondP++;
     }
+   return firstP + 1;
     
-    return firstP + 1;
-    
-};
 ```
