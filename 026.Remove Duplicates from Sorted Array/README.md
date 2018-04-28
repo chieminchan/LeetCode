@@ -4,7 +4,7 @@
 
 * 原来思路：
   遍历数组，对每一项进行nums.indexOf()配对，如果数组中有重复值，indexOf会返回第一个配对的值的位置，而和多个重复的值的位置不一样，进而采用splice(i,1) 
-  对数组重复值进行删除修改。（耗时：164ms）
+  对数组重复值进行删除修改。（耗时：314ms）
 
 ```JavaScript
 		var removeDuplicates = function(nums) {
@@ -21,7 +21,7 @@
 		removeDuplicates(numsArr);
 		console.log(numsArr);	
 ```
-* 参考解决方案1:
+* 参考解决方案1:（耗时：164ms）
 ```JavaScript
     for(var i = 0;i<nums.length;i++){
         if(nums[i]===nums[i+1]){
