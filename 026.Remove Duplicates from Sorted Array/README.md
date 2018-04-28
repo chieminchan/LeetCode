@@ -31,3 +31,22 @@
     }
     return nums.length;	
 ```
+
+* 参考解决方案2:（耗时：96ms）
+```JavaScript
+var removeDuplicates = function(nums) {
+    var cur = 0,
+        nex = 0;
+    
+    while(next < nums.length){
+        if(nums[next] > nums[cur]){
+            firstP++;
+            nums[firstP] = nums[secondP];
+        }
+        secondP++;
+    }
+    
+    return firstP + 1;
+    
+};
+```
