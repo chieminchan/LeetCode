@@ -19,3 +19,18 @@ var plusOne = function(digits) {
 Number.MAX_SAFE_INTEGER.toString().length; //16
 Number(digits.join("")).toString().length; //19
 ```
+
+再想,再想,得出思路：
+```javascript
+   var len = digits.length;
+    for(var i = digits.length-1;i>=0;i--){
+        if(digits[i]===9){
+            digits[i] = 0;
+        }else{
+            digits[i] += 1;
+            return digits;
+        }
+    }
+    digits.unshift(1);
+    return digits;
+```
