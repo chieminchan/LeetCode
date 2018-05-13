@@ -15,5 +15,7 @@ var plusOne = function(digits) {
 };
 ```
 然而,踩坑了....
+```javascript
 Number.MAX_SAFE_INTEGER.toString().length; //16
 Number(digits.join("")).toString().length; //19
+```
